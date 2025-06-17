@@ -7,23 +7,23 @@
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       display: flex;
-      background-color: #f5f5f5;
+      background: linear-gradient(to right, #e3f2fd, #ffffff);
     }
 
     aside {
-      width: 220px;
-      background-color: #111;
+      width: 230px;
+      background: #0d47a1;
       color: white;
       height: 100vh;
       position: fixed;
       padding: 20px;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+      box-shadow: 2px 0 10px rgba(0,0,0,0.3);
     }
 
     aside h2 {
-      font-size: 20px;
+      font-size: 22px;
       margin-bottom: 20px;
       text-align: center;
     }
@@ -38,57 +38,60 @@
       color: white;
       text-decoration: none;
       display: block;
-      margin: 10px 0;
-      padding: 8px;
-      border-radius: 5px;
+      margin: 12px 0;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: #1565c0;
     }
 
     aside a:hover {
-      background-color: #333;
+      background-color: #1976d2;
     }
 
     main {
-      margin-left: 240px;
-      padding: 20px;
+      margin-left: 250px;
+      padding: 25px;
       width: 100%;
     }
 
     section {
       margin-bottom: 40px;
-      padding: 20px;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 25px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #0d47a1;
     }
 
     .gallery img {
-      max-width: 100%;
+      max-width: 180px;
       margin: 10px;
-      border-radius: 5px;
+      border-radius: 10px;
+      border: 2px solid #1976d2;
     }
 
     .chat-box {
-      border: 1px solid #ccc;
+      border: 2px solid #90caf9;
       padding: 10px;
       height: 200px;
       overflow-y: auto;
-      background: #f9f9f9;
+      background: #e3f2fd;
+      border-radius: 10px;
     }
 
     .chat-input {
       width: 100%;
       padding: 10px;
       margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
     }
 
-    .login-form input {
-      padding: 8px;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-
-    .login-form button {
-      padding: 8px 20px;
+    .gallery-upload {
+      margin-top: 15px;
     }
   </style>
 </head>
@@ -101,7 +104,7 @@
     <a href="#horarios">Horarios</a>
     <a href="#profesores">Profesores</a>
     <a href="#ubicacion">Ubicación</a>
-    <a href="#que-es">¿Qué es Ikigai?</a>
+    <a href="#que-es">Qué es Ikigai</a>
     <a href="#chat-general">Chat General</a>
     <a href="#chat-avisos">Chat Avisos</a>
     <a href="#chat-ventas">Chat Ventas</a>
@@ -110,44 +113,15 @@
   <main>
     <section id="galeria">
       <h2>Galería</h2>
-      <div class="gallery">
-        <img src="https://via.placeholder.com/300x200" />
-        <img src="https://via.placeholder.com/300x200" />
-        <img src="https://via.placeholder.com/300x200" />
+      <div class="gallery" id="galleryContainer"></div>
+      <div class="gallery-upload">
+        <input type="file" id="imageUploader" accept="image/*" />
       </div>
     </section>
 
     <section id="horarios">
       <h2>Horarios</h2>
-      <pre>
-<b>LUNES</b>
-15:30 a 17:00 ADULTOS / Julian Alan
-17:30 a 18:30 INFANTILES / Emanuel Acosta y Luli Vainilla
-18:30 a 19:30 JUVENILES / Emanuel Acosta y Luli Vainilla
-19:30 a 21:00 ADULTOS / Silvio Lucero
-
-<b>MARTES</b>
-14:30 a 16:00 NOGI / Silvio Lucero
-16:30 a 18:00 FEMENINO / Luli Vainilla
-20:00 a 21:30 +40 / Gaston Ruiz
-
-<b>MIÉRCOLES</b>
-15:30 a 17:00 ADULTOS / Julian Alan
-17:30 a 18:30 INFANTILES / Emanuel Acosta y Luli Vainilla
-18:30 a 19:30 JUVENILES / Emanuel Acosta y Luli Vainilla
-19:30 a 21:00 ADULTOS / Silvio Lucero
-
-<b>JUEVES</b>
-14:30 a 16:00 NO-GI / Silvio Lucero
-16:30 a 18:00 FEMENINO / Luli Vainilla
-20:00 a 21:30 +40 / Gaston Ruiz
-
-<b>VIERNES</b>
-15:30 a 17:00 ADULTOS / Julian Alan
-17:30 a 18:30 INFANTILES / Emanuel Acosta y Luli Vainilla
-18:30 a 19:30 JUVENILES / Emanuel Acosta y Luli Vainilla
-19:30 a 21:00 ADULTOS / Silvio Lucero
-      </pre>
+      <pre>...</pre>
     </section>
 
     <section id="profesores">
@@ -170,10 +144,7 @@
     <section id="que-es">
       <h2>¿Qué es Ikigai?</h2>
       <p>
-        Ikigai Jiu-Jitsu – Nova União es una academia de primer nivel en Viedma,
-        con un enfoque integral que combina entrenamiento competitivo, disciplina
-        personal y bienestar. Atendemos a todas las edades, niveles y objetivos,
-        desde los más chicos hasta adultos mayores y grupos femeninos.
+        Ikigai Jiu-Jitsu es una academia de primer nivel en Viedma. Formamos parte de la asociación NOVA UNIÃO, con entrenamientos para todas las edades y niveles.
       </p>
     </section>
 
@@ -198,6 +169,7 @@
 
   <script>
     const nombre = prompt("Ingresá tu nombre:");
+
     function cargarMensajes(id) {
       const mensajes = JSON.parse(localStorage.getItem(id)) || [];
       const chat = document.getElementById(id);
@@ -206,39 +178,37 @@
 
     function guardarMensaje(id, texto) {
       const mensajes = JSON.parse(localStorage.getItem(id)) || [];
-      mensajes.push({
-        nombre,
-        fecha: new Date().toLocaleString(),
-        texto
-      });
+      mensajes.push({ nombre, fecha: new Date().toLocaleString(), texto });
       localStorage.setItem(id, JSON.stringify(mensajes));
       cargarMensajes(id);
     }
 
-    document.getElementById("inputGeneral").addEventListener("keypress", function(e) {
-      if (e.key === "Enter") {
-        guardarMensaje("chatGeneral", this.value);
-        this.value = "";
-      }
+    ["General", "Avisos", "Ventas"].forEach(tipo => {
+      const input = document.getElementById("input" + tipo);
+      input.addEventListener("keypress", e => {
+        if (e.key === "Enter") {
+          guardarMensaje("chat" + tipo, input.value);
+          input.value = "";
+        }
+      });
+      cargarMensajes("chat" + tipo);
     });
 
-    document.getElementById("inputAvisos").addEventListener("keypress", function(e) {
-      if (e.key === "Enter") {
-        guardarMensaje("chatAvisos", this.value);
-        this.value = "";
+    const imageUploader = document.getElementById("imageUploader");
+    const galleryContainer = document.getElementById("galleryContainer");
+
+    imageUploader.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file && file.type.startsWith("image/")) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const img = document.createElement("img");
+          img.src = e.target.result;
+          galleryContainer.appendChild(img);
+        };
+        reader.readAsDataURL(file);
       }
     });
-
-    document.getElementById("inputVentas").addEventListener("keypress", function(e) {
-      if (e.key === "Enter") {
-        guardarMensaje("chatVentas", this.value);
-        this.value = "";
-      }
-    });
-
-    cargarMensajes("chatGeneral");
-    cargarMensajes("chatAvisos");
-    cargarMensajes("chatVentas");
   </script>
 
 </body>
