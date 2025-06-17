@@ -8,7 +8,6 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      display: flex;
       background: linear-gradient(to right, #e3f2fd, #ffffff);
     }
 
@@ -51,7 +50,6 @@
     main {
       margin-left: 250px;
       padding: 25px;
-      width: 100%;
     }
 
     section {
@@ -93,6 +91,58 @@
     .gallery-upload {
       margin-top: 15px;
     }
+
+    .horario-dia {
+      margin-bottom: 20px;
+    }
+
+    .horario-dia h3 {
+      margin-bottom: 10px;
+      color: #1565c0;
+    }
+
+    .horario-dia ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .horario-dia li {
+      margin-bottom: 6px;
+      padding: 6px 12px;
+      background: #e3f2fd;
+      border-radius: 8px;
+      border-left: 4px solid #0d47a1;
+    }
+
+    @media (max-width: 768px) {
+      aside {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      aside img {
+        margin: 10px;
+      }
+
+      aside a {
+        margin: 5px;
+        flex: 1 1 45%;
+        text-align: center;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 10px;
+      }
+
+      .gallery img {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -121,7 +171,49 @@
 
     <section id="horarios">
       <h2>Horarios</h2>
-      <pre>...</pre>
+      <div class="horario-dia">
+        <h3>LUNES</h3>
+        <ul>
+          <li>15:30 a 17:00 ADULTOS / Julian Alan</li>
+          <li>17:30 a 18:30 INFANTILES / Emanuel Acosta y Luli Vainilla</li>
+          <li>18:30 a 19:30 JUVENILES / Emanuel Acosta y Luli Vainilla</li>
+          <li>19:30 a 21:00 ADULTOS / Silvio Lucero</li>
+        </ul>
+      </div>
+      <div class="horario-dia">
+        <h3>MARTES</h3>
+        <ul>
+          <li>14:30 a 16:00 NOGI / Silvio Lucero</li>
+          <li>16:30 a 18:00 FEMENINO / Luli Vainilla</li>
+          <li>20:00 a 21:30 +40 / Gaston Ruiz</li>
+        </ul>
+      </div>
+      <div class="horario-dia">
+        <h3>MIÉRCOLES</h3>
+        <ul>
+          <li>15:30 a 17:00 ADULTOS / Julian Alan</li>
+          <li>17:30 a 18:30 INFANTILES / Emanuel Acosta y Luli Vainilla</li>
+          <li>18:30 a 19:30 JUVENILES / Emanuel Acosta y Luli Vainilla</li>
+          <li>19:30 a 21:00 ADULTOS / Silvio Lucero</li>
+        </ul>
+      </div>
+      <div class="horario-dia">
+        <h3>JUEVES</h3>
+        <ul>
+          <li>14:30 a 16:00 NO-GI / Silvio Lucero</li>
+          <li>16:30 a 18:00 FEMENINO / Luli Vainilla</li>
+          <li>20:00 a 21:30 +40 / Gaston Ruiz</li>
+        </ul>
+      </div>
+      <div class="horario-dia">
+        <h3>VIERNES</h3>
+        <ul>
+          <li>15:30 a 17:00 ADULTOS / Julian Alan</li>
+          <li>17:30 a 18:30 INFANTILES / Emanuel Acosta y Luli Vainilla</li>
+          <li>18:30 a 19:30 JUVENILES / Emanuel Acosta y Luli Vainilla</li>
+          <li>19:30 a 21:00 ADULTOS / Silvio Lucero</li>
+        </ul>
+      </div>
     </section>
 
     <section id="profesores">
@@ -186,7 +278,7 @@
     ["General", "Avisos", "Ventas"].forEach(tipo => {
       const input = document.getElementById("input" + tipo);
       input.addEventListener("keypress", e => {
-        if (e.key === "Enter") {
+        if (e.key === "Enter" && input.value.trim() !== "") {
           guardarMensaje("chat" + tipo, input.value);
           input.value = "";
         }
