@@ -3,111 +3,173 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ikigai Jiu-Jitsu - NOVA UNIÃO</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Ikigai Jiu-Jitsu</title>
   <style>
-    ul {
-      list-style-type: none;
-      padding-left: 0;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #222;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid red;
+      padding-bottom: 0.5rem;
+      color: #111;
+    }
+
+    .galeria img {
+      width: 300px;
+      margin: 10px;
+      border: 4px solid #004aad;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      margin-top: 1rem;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="container">
-      <h1>Ikigai Jiu-Jitsu</h1>
-      <img src="img/logoikigai" alt="Logo Ikigai" style="height: 80px;">
-      <p>Afiliado a NOVA UNIÃO</p>
-      <nav>
-        <a href="#sobre">Academia</a>
-        <a href="#horarios">Horarios</a>
-        <a href="#profesores">Profesores</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
+    <h1>Ikigai Jiu-Jitsu</h1>
+    <p>Afiliado a NOVA UNIÃO</p>
   </header>
 
-  <main class="container">
-    <style>
-  .sin-puntos ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-</style>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#horarios">Horarios</a>
+    <a href="#profesores">Profesores</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+    <a href="https://www.instagram.com/ikigai_novauniao_viedma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
+  </nav>
 
-<section id="ikigai">
-  <h2>¿Qué es Ikigai?</h2>
-  <p>
-    Ikigai es una academia de jiu-jitsu brasileño dedicada a formar practicantes con valores de respeto, disciplina y excelencia técnica. Nuestro enfoque es el desarrollo personal y deportivo a través del arte suave.
-  </p>
-</section>
+  <section id="inicio">
+    <h2>¿Qué es Ikigai?</h2>
+    <p>Ikigai es una academia de jiu-jitsu brasileño dedicada a formar practicantes con valores de respeto, disciplina y excelencia técnica. Nuestro enfoque es el desarrollo personal y deportivo a través del arte suave.</p>
+  </section>
 
-<section id="horarios" class="sin-puntos">
-  <h2>Horarios</h2>
-  <ul>
-    <li><strong>Lunes</strong>
-      <ul>
-        <li>15:30 a 17:00 – Adultos (Mexa)</li>
-        <li>17:30 a 18:30 – Infantiles (Ema y Luli)</li>
-        <li>18:30 a 19:30 – Juveniles (Ema y Luli)</li>
-        <li>19:30 a 21:00 – Adultos (Silvinho)</li>
-      </ul>
-    </li>
-    <li><strong>Martes</strong>
-      <ul>
-        <li>14:30 a 16:00 – No-Gi (Silvinho)</li>
-        <li>16:30 a 18:00 – Femenino (Luli)</li>
-        <li>20:00 a 21:30 – +40 (Pira)</li>
-      </ul>
-    </li>
-    <li><strong>Miércoles</strong>
-      <ul>
-        <li>15:30 a 17:00 – Adultos (Mexa)</li>
-        <li>17:30 a 18:30 – Infantiles (Ema y Luli)</li>
-        <li>18:30 a 19:30 – Juveniles (Ema y Luli)</li>
-        <li>19:30 a 21:00 – Adultos (Silvinho)</li>
-      </ul>
-    </li>
-    <li><strong>Jueves</strong>
-      <ul>
-        <li>14:30 a 16:00 – No-Gi (Silvinho)</li>
-        <li>16:30 a 18:00 – Femenino (Luli)</li>
-        <li>20:00 a 21:30 – +40 (Pira)</li>
-      </ul>
-    </li>
-    <li><strong>Viernes</strong>
-      <ul>
-        <li>15:30 a 17:00 – Adultos (Mexa)</li>
-        <li>17:30 a 18:30 – Infantiles (Ema y Luli)</li>
-        <li>18:30 a 19:30 – Juveniles (Ema y Luli)</li>
-        <li>19:30 a 21:00 – Adultos (Silvinho)</li>
-      </ul>
-    </li>
-  </ul>
-</section>
+  <section id="horarios">
+    <h2>Horarios</h2>
+    <ul>
+      <li><strong>Lunes</strong>
+        <ul>
+          <li>15:30 a 17:00 – Adultos (Mexa)</li>
+          <li>17:30 a 18:30 – Infantiles (Ema y Luli)</li>
+          <li>18:30 a 19:30 – Juveniles (Ema y Luli)</li>
+          <li>19:30 a 21:00 – Adultos (Silvinho)</li>
+        </ul>
+      </li>
+      <li><strong>Martes</strong>
+        <ul>
+          <li>14:30 a 16:00 – No-Gi (Silvinho)</li>
+          <li>16:30 a 18:00 – Femenino (Luli)</li>
+          <li>20:00 a 21:30 – +40 (Pira)</li>
+        </ul>
+      </li>
+      <li><strong>Miércoles</strong>
+        <ul>
+          <li>15:30 a 17:00 – Adultos (Mexa)</li>
+          <li>17:30 a 18:30 – Infantiles (Ema y Luli)</li>
+          <li>18:30 a 19:30 – Juveniles (Ema y Luli)</li>
+          <li>19:30 a 21:00 – Adultos (Silvinho)</li>
+        </ul>
+      </li>
+      <li><strong>Jueves</strong>
+        <ul>
+          <li>14:30 a 16:00 – No-Gi (Silvinho)</li>
+          <li>16:30 a 18:00 – Femenino (Luli)</li>
+          <li>20:00 a 21:30 – +40 (Pira)</li>
+        </ul>
+      </li>
+      <li><strong>Viernes</strong>
+        <ul>
+          <li>15:30 a 17:00 – Adultos (Mexa)</li>
+          <li>17:30 a 18:30 – Infantiles (Ema y Luli)</li>
+          <li>18:30 a 19:30 – Juveniles (Ema y Luli)</li>
+          <li>19:30 a 21:00 – Adultos (Silvinho)</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
 
-<section id="profesores">
-  <h2>Profesores</h2>
-  <ul class="sin-puntos">
-    <li>Silvio Lucero</li>
-    <li>Julián Alan</li>
-    <li>Emanuel Acosta</li>
-    <li>Luli Vainilla</li>
-    <li>Gastón Ruiz</li>
-  </ul>
-</section>
+  <section id="profesores">
+    <h2>Profesores</h2>
+    <ul>
+      <li>Silvio Lucero</li>
+      <li>Julián Alan</li>
+      <li>Emanuel Acosta</li>
+      <li>Luli Vainilla</li>
+      <li>Gastón Ruiz</li>
+    </ul>
+  </section>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>📍 Ubicación: Tucuman 149 Viedma</p>
-      <p>📲 WhatsApp: +54 9 2920 29-0565</p>
-      <p>📧 Email: contacto@ikigaibjj.com (opcional)</p>
-    </section>
-  </main>
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="galeria">
+      <!-- Acá podés pegar las fotos cuando me las pases -->
+      <p>📷 Próximamente imágenes de la academia.</p>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📍 Dirección: Tucumán 149, Viedma, Río Negro, Argentina</p>
+    <p>📱 WhatsApp: <a href="https://wa.me/5492920290565" target="_blank">+54 9 2920 29-0565</a></p>
+
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.1912369142873!2d-63.00611002415799!3d-40.814029971372845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95f6a356a46db2ab%3A0x207d6c52000d7a6a!2sTucum%C3%A1n%20149%2C%20Viedma%2C%20R%C3%ADo%20Negro!5e0!3m2!1ses-419!2sar!4v1718661348975!5m2!1ses-419!2sar" 
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
 
   <footer>
     <p>© 2025 Ikigai Jiu-Jitsu - Todos los derechos reservados.</p>
   </footer>
+
 </body>
 </html>
-
