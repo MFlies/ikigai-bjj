@@ -3,124 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Academia Ikigai - Nova União</title>
+  <title>Ikigai BJJ - Nova União Viedma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --azul: #1e3a8a;
-      --rojo: #dc2626;
-      --blanco: #ffffff;
-      --negro: #111827;
-      --gris-claro: #f3f4f6;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--gris-claro);
+    * {
       margin: 0;
-      color: var(--negro);
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
     }
-
+    body {
+      background-color: #f0f4ff;
+      color: #000;
+    }
     header {
-      background: linear-gradient(to right, var(--azul), var(--rojo));
-      color: var(--blanco);
-      padding: 1rem;
+      background: linear-gradient(to right, #002f6c, #ba0c2f);
+      color: white;
+      padding: 1.5rem;
       text-align: center;
     }
-
     nav {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      background-color: var(--azul);
-      padding: 0.5rem;
+      gap: 2rem;
+      background-color: #002f6c;
+      padding: 1rem;
     }
-
     nav a {
-      color: var(--blanco);
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
-
     section {
       padding: 2rem;
     }
-
     h2 {
-      color: var(--azul);
+      color: #002f6c;
+      margin-bottom: 1rem;
     }
-
     ul {
-      list-style: none;
+      list-style-type: none;
       padding-left: 0;
     }
-
+    li {
+      margin-bottom: 0.5rem;
+    }
     .chat-box {
-      background: var(--blanco);
-      border: 2px solid var(--azul);
-      border-radius: 10px;
+      border: 1px solid #ccc;
       padding: 1rem;
       max-height: 300px;
       overflow-y: auto;
+      background: #fff;
       margin-bottom: 1rem;
     }
-
-    .chat-message {
-      margin-bottom: 0.5rem;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.5rem;
-    }
-
-    .form-chat {
-      display: flex;
-      gap: 0.5rem;
-    }
-
-    .form-chat input, .form-chat button {
+    .chat-form input, .chat-form button {
       padding: 0.5rem;
-      font-size: 1rem;
+      margin-right: 0.5rem;
     }
-
-    .form-chat input {
-      flex: 1;
+    footer {
+      background-color: #002f6c;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
-
-    .login-section {
-      background-color: var(--blanco);
-      padding: 2rem;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-      max-width: 400px;
-      margin: 2rem auto;
+    .map-container iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Academia Ikigai - Nova União</h1>
-    <p><a href="https://www.instagram.com/ikigai_novauniao_viedma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" style="color: var(--blanco); text-decoration: underline;">Instagram Oficial</a></p>
+    <p>Jiu-jitsu brasileño en Viedma</p>
   </header>
-
+  
   <nav>
     <a href="#horarios">Horarios</a>
     <a href="#profesores">Profesores</a>
     <a href="#tienda">Tienda</a>
     <a href="#avisos">Avisos</a>
+    <a href="#chat">Chat General</a>
+    <a href="https://www.instagram.com/ikigai_novauniao_viedma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
   </nav>
 
-  <section class="login-section">
-    <h2>Iniciar Sesión / Registrarse</h2>
-    <input type="text" id="nombreUsuario" placeholder="Tu nombre" />
-    <button onclick="iniciarSesion()">Entrar</button>
+  <section id="galeria">
+    <h2>Galería</h2>
+    <p>Aquí irán las imágenes destacadas de la academia y el BJJ.</p>
   </section>
 
   <section id="horarios">
     <h2>Horarios</h2>
     <ul>
-      <li>Lunes: 19:30 - 21:00 / 21:00 - 23:00</li>
-      <li>Martes: 15:00 - 16:55 (Gimnasio) / 17:00 - 18:00 (Taller escolar) / 21:00 - 23:00</li>
-      <li>Miércoles: 19:30 - 21:00 / 21:00 - 23:00</li>
-      <li>Jueves: 15:00 - 17:00 (Gimnasio) / 21:00 - 23:00</li>
-      <li>Viernes: 14:00 - 15:00 / 19:30 - 21:00 / 21:00 - 23:00</li>
+      <li>Lunes a Viernes: 20:00 - 21:00 (Infantiles)</li>
+      <li>Lunes a Viernes: 21:00 - 22:30 (Adultos)</li>
+      <li>Miércoles y Viernes: 10:00 - 11:30 (Libre)</li>
+      <li>Martes y Jueves: 15:00 - 16:30 (Femenino)</li>
     </ul>
   </section>
 
@@ -136,54 +118,61 @@
   </section>
 
   <section id="tienda">
-    <h2>Tienda (Chat entre miembros)</h2>
+    <h2>Tienda (Chat de Ventas)</h2>
     <div class="chat-box" id="chatTienda"></div>
-    <div class="form-chat">
-      <input type="text" id="mensajeTienda" placeholder="Escribe un mensaje..." />
-      <button onclick="enviarMensaje('tienda')">Enviar</button>
-    </div>
+    <form class="chat-form" onsubmit="return enviarMensaje('tienda')">
+      <input type="text" id="nombreTienda" placeholder="Tu nombre" required>
+      <input type="text" id="mensajeTienda" placeholder="Tu mensaje" required>
+      <button type="submit">Enviar</button>
+    </form>
   </section>
 
   <section id="avisos">
-    <h2>Avisos y Noticias</h2>
+    <h2>Avisos (Canal de Información)</h2>
     <div class="chat-box" id="chatAvisos"></div>
-    <div class="form-chat">
-      <input type="text" id="mensajeAviso" placeholder="Publicar un aviso..." />
-      <button onclick="enviarMensaje('avisos')">Enviar</button>
+    <form class="chat-form" onsubmit="return enviarMensaje('avisos')">
+      <input type="text" id="nombreAvisos" placeholder="Tu nombre" required>
+      <input type="text" id="mensajeAvisos" placeholder="Tu mensaje" required>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section id="chat">
+    <h2>Chat General</h2>
+    <div class="chat-box" id="chatGeneral"></div>
+    <form class="chat-form" onsubmit="return enviarMensaje('general')">
+      <input type="text" id="nombreGeneral" placeholder="Tu nombre" required>
+      <input type="text" id="mensajeGeneral" placeholder="Tu mensaje" required>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section id="ubicacion">
+    <h2>Ubicación</h2>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.123456789!2d-63.000000!3d-40.800000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0000000000000000!2sIkigai%20Academia%20BJJ!5e0!3m2!1ses!2sar!4v0000000000000" allowfullscreen></iframe>
     </div>
   </section>
 
+  <footer>
+    <p>&copy; 2025 Ikigai BJJ - Nova União Viedma</p>
+  </footer>
+
   <script>
-    let usuario = null;
-
-    function iniciarSesion() {
-      const input = document.getElementById('nombreUsuario');
-      if (input.value.trim()) {
-        usuario = input.value.trim();
-        alert(`Bienvenido/a, ${usuario}! Ahora podés participar en los chats.`);
-        document.querySelector('.login-section').style.display = 'none';
-      } else {
-        alert('Por favor, ingresá tu nombre.');
-      }
+    function enviarMensaje(tipo) {
+      const nombre = document.getElementById(`nombre${capitalize(tipo)}`).value;
+      const mensaje = document.getElementById(`mensaje${capitalize(tipo)}`).value;
+      const hora = new Date().toLocaleTimeString();
+      const chat = document.getElementById(`chat${capitalize(tipo)}`);
+      const div = document.createElement("div");
+      div.textContent = `[${hora}] ${nombre}: ${mensaje}`;
+      chat.appendChild(div);
+      chat.scrollTop = chat.scrollHeight;
+      document.getElementById(`mensaje${capitalize(tipo)}`).value = "";
+      return false;
     }
-
-    function enviarMensaje(area) {
-      if (!usuario) {
-        alert('Tenés que iniciar sesión primero.');
-        return;
-      }
-      const input = area === 'tienda' ? document.getElementById('mensajeTienda') : document.getElementById('mensajeAviso');
-      const contenedor = area === 'tienda' ? document.getElementById('chatTienda') : document.getElementById('chatAvisos');
-      const texto = input.value.trim();
-      if (texto) {
-        const hora = new Date().toLocaleTimeString();
-        const mensaje = document.createElement('div');
-        mensaje.classList.add('chat-message');
-        mensaje.innerHTML = `<strong>${usuario}</strong> [${hora}]: ${texto}`;
-        contenedor.appendChild(mensaje);
-        input.value = '';
-        contenedor.scrollTop = contenedor.scrollHeight;
-      }
+    function capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
     }
   </script>
 </body>
