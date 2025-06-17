@@ -3,161 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ikigai BJJ Viedma</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #e3f2fd, #ffffff);
-      display: flex;
-      flex-direction: row;
-      min-height: 100vh;
-    }
-
-    aside {
-      background: #0d47a1;
-      color: white;
-      width: 230px;
-      padding: 20px;
-      position: fixed;
-      height: 100vh;
-      box-shadow: 2px 0 10px rgba(0,0,0,0.3);
-    }
-
-    aside h2 {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    aside img {
-      display: block;
-      width: 100px;
-      margin: 0 auto 20px auto;
-    }
-
-    aside a {
-      display: block;
-      margin: 12px 0;
-      padding: 10px;
-      text-decoration: none;
-      color: white;
-      border-radius: 8px;
-      background-color: #1565c0;
-      transition: background-color 0.3s;
-    }
-
-    aside a:hover {
-      background-color: #1976d2;
-    }
-
-    main {
-      margin-left: 250px;
-      padding: 25px;
-      flex: 1;
-    }
-
-    section {
-      background: white;
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 40px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: #0d47a1;
-      margin-bottom: 15px;
-    }
-
-    .gallery img {
-      max-width: 100%;
-      margin: 10px;
-      border-radius: 10px;
-      border: 2px solid #1976d2;
-    }
-
-    .chat-box {
-      border: 2px solid #90caf9;
-      padding: 10px;
-      height: 200px;
-      overflow-y: auto;
-      background: #e3f2fd;
-      border-radius: 10px;
-    }
-
-    .chat-input {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-
-    .gallery-upload {
-      margin-top: 15px;
-    }
-
-    pre {
-      background: #f5f5f5;
-      padding: 15px;
-      border-radius: 10px;
-      font-size: 16px;
-      overflow-x: auto;
-      white-space: pre-wrap;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    @media (max-width: 768px) {
-      aside {
-        position: relative;
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      main {
-        margin-left: 0;
-        padding: 15px;
-      }
-    }
-  </style>
+  <title>Academia Ikigai BJJ</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <aside>
-    <img src="logoikigai.png" alt="Logo Ikigai">
-    <h2>IKIGAI BJJ</h2>
-    <a href="#galeria">Galería</a>
-    <a href="#horarios">Horarios</a>
-    <a href="#profesores">Profesores</a>
-    <a href="#ubicacion">Ubicación</a>
-    <a href="#que-es">Qué es Ikigai</a>
-    <a href="#chat-general">Chat General</a>
-    <a href="#chat-avisos">Chat Avisos</a>
-    <a href="#chat-ventas">Chat Ventas</a>
-  </aside>
-  <main>
-    <section id="galeria">
-      <h2>Galería</h2>
-      <div class="gallery" id="galleryContainer"></div>
-      <div class="gallery-upload">
-        <input type="file" id="imageUploader" accept="image/*" />
-      </div>
-    </section>
+  <div class="auth-container" id="authContainer">
+    <form id="loginForm">
+      <h2>Iniciar Sesión</h2>
+      <input type="text" id="username" placeholder="Usuario" required />
+      <input type="password" id="password" placeholder="Contraseña" required />
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
 
-    <section id="horarios">
-      <h2>Horarios</h2>
-      <pre>
+  <div class="main-container" id="mainContent" style="display:none;">
+    <aside class="sidebar">
+      <h2>Menú</h2>
+      <ul>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#horarios">Horarios</a></li>
+        <li><a href="#profesores">Profesores</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#ikigai">¿Qué es Ikigai?</a></li>
+        <li><a href="#chatGeneral">Chat General</a></li>
+        <li><a href="#chatAvisos">Avisos</a></li>
+        <li><a href="#chatVentas">Ventas</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <section id="galeria" class="galeria">
+        <h1>Bienvenidos a Ikigai BJJ</h1>
+        <div class="galeria-fotos">
+          <img src="img1.jpg" alt="Academia 1">
+          <img src="img2.jpg" alt="Academia 2">
+          <img src="img3.jpg" alt="Academia 3">
+        </div>
+      </section>
+
+      <section id="horarios">
+        <h2>Horarios</h2>
+        <pre>
 LUNES
 15:30 a 17:00 ADULTOS / Julian Alan
 17:30 a 18:30 INFANTILES / Emanuel Acosta y Luli Vainilla
@@ -185,92 +71,56 @@ VIERNES
 17:30 a 18:30 INFANTILES / Emanuel Acosta y Luli Vainilla
 18:30 a 19:30 JUVENILES / Emanuel Acosta y Luli Vainilla
 19:30 a 21:00 ADULTOS / Silvio Lucero
-      </pre>
-    </section>
+        </pre>
+      </section>
 
-    <section id="profesores">
-      <h2>Profesores</h2>
-      <ul>
-        <li>Silvio Lucero</li>
-        <li>Emanuel Acosta</li>
-        <li>Luli Vainilla</li>
-        <li>Julian Alan</li>
-        <li>Gaston Ruiz</li>
-      </ul>
-    </section>
+      <section id="profesores">
+        <h2>Profesores</h2>
+        <ul>
+          <li>Silvio Lucero</li>
+          <li>Emanuel Acosta</li>
+          <li>Luli Vainilla</li>
+          <li>Julian Alan</li>
+          <li>Gaston Ruiz</li>
+        </ul>
+      </section>
 
-    <section id="ubicacion">
-      <h2>Ubicación</h2>
-      <p>Argentina, Río Negro, Viedma</p>
-      <p>Dirección: Tucumán 149</p>
-    </section>
+      <section id="ubicacion">
+        <h2>Ubicación</h2>
+        <p>País: Argentina</p>
+        <p>Provincia: Río Negro</p>
+        <p>Ciudad: Viedma</p>
+        <p>Dirección: Tucumán 149</p>
+      </section>
 
-    <section id="que-es">
-      <h2>¿Qué es Ikigai?</h2>
-      <p>Ikigai Jiu-Jitsu es una academia de primer nivel en Viedma. Formamos parte de la asociación NOVA UNIÃO, con entrenamientos para todas las edades y niveles.</p>
-    </section>
+      <section id="ikigai">
+        <h2>¿Qué es Ikigai?</h2>
+        <p>Ikigai Jiu-Jitsu – Nova União es una academia de primer nivel en Viedma, con un enfoque integral que combina entrenamiento competitivo, disciplina personal y bienestar. Atendemos a todas las edades, niveles y objetivos, desde los más chicos hasta adultos mayores y grupos femeninos.</p>
+      </section>
 
-    <section id="chat-general">
-      <h2>Chat General</h2>
-      <div class="chat-box" id="chatGeneral"></div>
-      <input class="chat-input" placeholder="Tu mensaje" id="inputGeneral" />
-    </section>
+      <section id="chatGeneral">
+        <h2>Chat General</h2>
+        <div class="chat-box" id="chatBoxGeneral"></div>
+        <input type="text" id="inputGeneral" placeholder="Escribe tu mensaje..." />
+        <button onclick="sendMessage('General')">Enviar</button>
+      </section>
 
-    <section id="chat-avisos">
-      <h2>Chat Avisos</h2>
-      <div class="chat-box" id="chatAvisos"></div>
-      <input class="chat-input" placeholder="Aviso" id="inputAvisos" />
-    </section>
+      <section id="chatAvisos">
+        <h2>Avisos</h2>
+        <div class="chat-box" id="chatBoxAvisos"></div>
+        <input type="text" id="inputAvisos" placeholder="Escribe un aviso..." />
+        <button onclick="sendMessage('Avisos')">Enviar</button>
+      </section>
 
-    <section id="chat-ventas">
-      <h2>Chat Ventas</h2>
-      <div class="chat-box" id="chatVentas"></div>
-      <input class="chat-input" placeholder="Mensaje de venta" id="inputVentas" />
-    </section>
-  </main>
+      <section id="chatVentas">
+        <h2>Ventas</h2>
+        <div class="chat-box" id="chatBoxVentas"></div>
+        <input type="text" id="inputVentas" placeholder="Escribe tu mensaje de venta..." />
+        <button onclick="sendMessage('Ventas')">Enviar</button>
+      </section>
+    </main>
+  </div>
 
-  <script>
-    const nombre = prompt("Ingresá tu nombre:");
-
-    function cargarMensajes(id) {
-      const mensajes = JSON.parse(localStorage.getItem(id)) || [];
-      const chat = document.getElementById(id);
-      chat.innerHTML = mensajes.map(msg => `<div><b>${msg.nombre}</b> (${msg.fecha}): ${msg.texto}</div>`).join('');
-    }
-
-    function guardarMensaje(id, texto) {
-      const mensajes = JSON.parse(localStorage.getItem(id)) || [];
-      mensajes.push({ nombre, fecha: new Date().toLocaleString(), texto });
-      localStorage.setItem(id, JSON.stringify(mensajes));
-      cargarMensajes(id);
-    }
-
-    ["General", "Avisos", "Ventas"].forEach(tipo => {
-      const input = document.getElementById("input" + tipo);
-      input.addEventListener("keypress", e => {
-        if (e.key === "Enter") {
-          guardarMensaje("chat" + tipo, input.value);
-          input.value = "";
-        }
-      });
-      cargarMensajes("chat" + tipo);
-    });
-
-    const imageUploader = document.getElementById("imageUploader");
-    const galleryContainer = document.getElementById("galleryContainer");
-
-    imageUploader.addEventListener("change", function () {
-      const file = this.files[0];
-      if (file && file.type.startsWith("image/")) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          const img = document.createElement("img");
-          img.src = e.target.result;
-          galleryContainer.appendChild(img);
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
