@@ -3,177 +3,243 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ikigai BJJ - Nova União Viedma</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Ikigai BJJ Viedma</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-    }
     body {
-      background-color: #f0f4ff;
-      color: #000;
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      background-color: #f5f5f5;
     }
-    header {
-      background: linear-gradient(to right, #002f6c, #ba0c2f);
+
+    aside {
+      width: 220px;
+      background-color: #111;
       color: white;
-      padding: 1.5rem;
+      height: 100vh;
+      position: fixed;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    }
+
+    aside h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
       text-align: center;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      background-color: #002f6c;
-      padding: 1rem;
+
+    aside img {
+      width: 100px;
+      margin: 0 auto 20px auto;
+      display: block;
     }
-    nav a {
+
+    aside a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
+      display: block;
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 5px;
     }
+
+    aside a:hover {
+      background-color: #333;
+    }
+
+    main {
+      margin-left: 240px;
+      padding: 20px;
+      width: 100%;
+    }
+
     section {
-      padding: 2rem;
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    h2 {
-      color: #002f6c;
-      margin-bottom: 1rem;
+
+    .gallery img {
+      max-width: 100%;
+      margin: 10px;
+      border-radius: 5px;
     }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
+
     .chat-box {
       border: 1px solid #ccc;
-      padding: 1rem;
-      max-height: 300px;
+      padding: 10px;
+      height: 200px;
       overflow-y: auto;
-      background: #fff;
-      margin-bottom: 1rem;
+      background: #f9f9f9;
     }
-    .chat-form input, .chat-form button {
-      padding: 0.5rem;
-      margin-right: 0.5rem;
-    }
-    footer {
-      background-color: #002f6c;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-    .map-container iframe {
+
+    .chat-input {
       width: 100%;
-      height: 300px;
-      border: none;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    .login-form input {
+      padding: 8px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .login-form button {
+      padding: 8px 20px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Academia Ikigai - Nova União</h1>
-    <p>Jiu-jitsu brasileño en Viedma</p>
-  </header>
-  
-  <nav>
+
+  <aside>
+    <img src="logoikigai.png" alt="Logo Ikigai">
+    <h2>IKIGAI BJJ</h2>
+    <a href="#galeria">Galería</a>
     <a href="#horarios">Horarios</a>
     <a href="#profesores">Profesores</a>
-    <a href="#tienda">Tienda</a>
-    <a href="#avisos">Avisos</a>
-    <a href="#chat">Chat General</a>
-    <a href="https://www.instagram.com/ikigai_novauniao_viedma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
-  </nav>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="#que-es">¿Qué es Ikigai?</a>
+    <a href="#chat-general">Chat General</a>
+    <a href="#chat-avisos">Chat Avisos</a>
+    <a href="#chat-ventas">Chat Ventas</a>
+  </aside>
 
-  <section id="galeria">
-    <h2>Galería</h2>
-    <p>Aquí irán las imágenes destacadas de la academia y el BJJ.</p>
-  </section>
+  <main>
+    <section id="galeria">
+      <h2>Galería</h2>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/300x200" />
+        <img src="https://via.placeholder.com/300x200" />
+        <img src="https://via.placeholder.com/300x200" />
+      </div>
+    </section>
 
-  <section id="horarios">
-    <h2>Horarios</h2>
-    <ul>
-      <li>Lunes a Viernes: 20:00 - 21:00 (Infantiles)</li>
-      <li>Lunes a Viernes: 21:00 - 22:30 (Adultos)</li>
-      <li>Miércoles y Viernes: 10:00 - 11:30 (Libre)</li>
-      <li>Martes y Jueves: 15:00 - 16:30 (Femenino)</li>
-    </ul>
-  </section>
+    <section id="horarios">
+      <h2>Horarios</h2>
+      <pre>
+<b>LUNES</b>
+15:30 a 17:00 ADULTOS / Julian Alan
+17:30 a 18:30 INFANTILES / Emanuel Acosta y Luli Vainilla
+18:30 a 19:30 JUVENILES / Emanuel Acosta y Luli Vainilla
+19:30 a 21:00 ADULTOS / Silvio Lucero
 
-  <section id="profesores">
-    <h2>Profesores</h2>
-    <ul>
-      <li>Silvio Lucero</li>
-      <li>Julián Alan</li>
-      <li>Emanuel Acosta</li>
-      <li>Luli Vainilla</li>
-      <li>Gastón Ruiz</li>
-    </ul>
-  </section>
+<b>MARTES</b>
+14:30 a 16:00 NOGI / Silvio Lucero
+16:30 a 18:00 FEMENINO / Luli Vainilla
+20:00 a 21:30 +40 / Gaston Ruiz
 
-  <section id="tienda">
-    <h2>Tienda (Chat de Ventas)</h2>
-    <div class="chat-box" id="chatTienda"></div>
-    <form class="chat-form" onsubmit="return enviarMensaje('tienda')">
-      <input type="text" id="nombreTienda" placeholder="Tu nombre" required>
-      <input type="text" id="mensajeTienda" placeholder="Tu mensaje" required>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+<b>MIÉRCOLES</b>
+15:30 a 17:00 ADULTOS / Julian Alan
+17:30 a 18:30 INFANTILES / Emanuel Acosta y Luli Vainilla
+18:30 a 19:30 JUVENILES / Emanuel Acosta y Luli Vainilla
+19:30 a 21:00 ADULTOS / Silvio Lucero
 
-  <section id="avisos">
-    <h2>Avisos (Canal de Información)</h2>
-    <div class="chat-box" id="chatAvisos"></div>
-    <form class="chat-form" onsubmit="return enviarMensaje('avisos')">
-      <input type="text" id="nombreAvisos" placeholder="Tu nombre" required>
-      <input type="text" id="mensajeAvisos" placeholder="Tu mensaje" required>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+<b>JUEVES</b>
+14:30 a 16:00 NO-GI / Silvio Lucero
+16:30 a 18:00 FEMENINO / Luli Vainilla
+20:00 a 21:30 +40 / Gaston Ruiz
 
-  <section id="chat">
-    <h2>Chat General</h2>
-    <div class="chat-box" id="chatGeneral"></div>
-    <form class="chat-form" onsubmit="return enviarMensaje('general')">
-      <input type="text" id="nombreGeneral" placeholder="Tu nombre" required>
-      <input type="text" id="mensajeGeneral" placeholder="Tu mensaje" required>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+<b>VIERNES</b>
+15:30 a 17:00 ADULTOS / Julian Alan
+17:30 a 18:30 INFANTILES / Emanuel Acosta y Luli Vainilla
+18:30 a 19:30 JUVENILES / Emanuel Acosta y Luli Vainilla
+19:30 a 21:00 ADULTOS / Silvio Lucero
+      </pre>
+    </section>
 
-  <section id="ubicacion">
-    <h2>Ubicación</h2>
-    <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.123456789!2d-63.000000!3d-40.800000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0000000000000000!2sIkigai%20Academia%20BJJ!5e0!3m2!1ses!2sar!4v0000000000000" allowfullscreen></iframe>
-    </div>
-  </section>
+    <section id="profesores">
+      <h2>Profesores</h2>
+      <ul>
+        <li>Silvio Lucero</li>
+        <li>Emanuel Acosta</li>
+        <li>Luli Vainilla</li>
+        <li>Julian Alan</li>
+        <li>Gaston Ruiz</li>
+      </ul>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Ikigai BJJ - Nova União Viedma</p>
-  </footer>
+    <section id="ubicacion">
+      <h2>Ubicación</h2>
+      <p>Argentina, Río Negro, Viedma</p>
+      <p>Dirección: Tucumán 149</p>
+    </section>
+
+    <section id="que-es">
+      <h2>¿Qué es Ikigai?</h2>
+      <p>
+        Ikigai Jiu-Jitsu – Nova União es una academia de primer nivel en Viedma,
+        con un enfoque integral que combina entrenamiento competitivo, disciplina
+        personal y bienestar. Atendemos a todas las edades, niveles y objetivos,
+        desde los más chicos hasta adultos mayores y grupos femeninos.
+      </p>
+    </section>
+
+    <section id="chat-general">
+      <h2>Chat General</h2>
+      <div class="chat-box" id="chatGeneral"></div>
+      <input class="chat-input" placeholder="Tu mensaje" id="inputGeneral" />
+    </section>
+
+    <section id="chat-avisos">
+      <h2>Chat Avisos</h2>
+      <div class="chat-box" id="chatAvisos"></div>
+      <input class="chat-input" placeholder="Aviso" id="inputAvisos" />
+    </section>
+
+    <section id="chat-ventas">
+      <h2>Chat Ventas</h2>
+      <div class="chat-box" id="chatVentas"></div>
+      <input class="chat-input" placeholder="Mensaje de venta" id="inputVentas" />
+    </section>
+  </main>
 
   <script>
-    function enviarMensaje(tipo) {
-      const nombre = document.getElementById(`nombre${capitalize(tipo)}`).value;
-      const mensaje = document.getElementById(`mensaje${capitalize(tipo)}`).value;
-      const hora = new Date().toLocaleTimeString();
-      const chat = document.getElementById(`chat${capitalize(tipo)}`);
-      const div = document.createElement("div");
-      div.textContent = `[${hora}] ${nombre}: ${mensaje}`;
-      chat.appendChild(div);
-      chat.scrollTop = chat.scrollHeight;
-      document.getElementById(`mensaje${capitalize(tipo)}`).value = "";
-      return false;
+    const nombre = prompt("Ingresá tu nombre:");
+    function cargarMensajes(id) {
+      const mensajes = JSON.parse(localStorage.getItem(id)) || [];
+      const chat = document.getElementById(id);
+      chat.innerHTML = mensajes.map(msg => `<div><b>${msg.nombre}</b> (${msg.fecha}): ${msg.texto}</div>`).join('');
     }
-    function capitalize(str) {
-      return str.charAt(0).toUpperCase() + str.slice(1);
+
+    function guardarMensaje(id, texto) {
+      const mensajes = JSON.parse(localStorage.getItem(id)) || [];
+      mensajes.push({
+        nombre,
+        fecha: new Date().toLocaleString(),
+        texto
+      });
+      localStorage.setItem(id, JSON.stringify(mensajes));
+      cargarMensajes(id);
     }
+
+    document.getElementById("inputGeneral").addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        guardarMensaje("chatGeneral", this.value);
+        this.value = "";
+      }
+    });
+
+    document.getElementById("inputAvisos").addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        guardarMensaje("chatAvisos", this.value);
+        this.value = "";
+      }
+    });
+
+    document.getElementById("inputVentas").addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        guardarMensaje("chatVentas", this.value);
+        this.value = "";
+      }
+    });
+
+    cargarMensajes("chatGeneral");
+    cargarMensajes("chatAvisos");
+    cargarMensajes("chatVentas");
   </script>
+
 </body>
 </html>
