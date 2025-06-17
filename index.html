@@ -2,126 +2,130 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ikigai Jiu-Jitsu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academia Ikigai - Nova União</title>
   <style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f5f5f5;
-  color: #000000;
-}
-
-header {
-  background-color: #0d47a1;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-nav {
-  background-color: #1976d2;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #ef5350;
-}
-
-section {
-  padding: 30px;
-  background-color: white;
-  border-bottom: 2px solid #1976d2;
-}
-
-h2 {
-  color: #c62828;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-footer {
-  background-color: #0d47a1;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+      color: #212121;
+    }
+    header {
+      background-color: #0d47a1;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #2196f3;
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #f44336;
+    }
+    section {
+      padding: 40px 20px;
+      background-color: #ffffff;
+      margin: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    h2 {
+      color: #f44336;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .productos, .avisos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: #f2f2f2;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #0d47a1;
+    }
+    .chat-box {
+      width: 100%;
+      height: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      overflow-y: scroll;
+      background-color: #fff;
+      margin-bottom: 10px;
+    }
+    .chat-input {
+      display: flex;
+      gap: 10px;
+    }
+    .chat-input input {
+      flex-grow: 1;
+      padding: 10px;
+    }
+    .chat-input button {
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Ikigai Jiu-Jitsu</h1>
-    <p>Afiliado a NOVA UNIÃO</p>
+    <h1>Academia Ikigai - Nova União</h1>
+    <p>Pasón por el Jiu-Jitsu Brasileño</p>
   </header>
 
   <nav>
-    <a href="#inicio">Inicio</a>
     <a href="#horarios">Horarios</a>
     <a href="#profesores">Profesores</a>
-    <a href="#galeria">Galería</a>
-    <a href="#contacto">Contacto</a>
-    <a href="https://www.instagram.com/ikigai_novauniao_viedma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a>
+    <a href="#tienda">Tienda</a>
+    <a href="#avisos">Avisos</a>
+    <a href="#chat">Chat</a>
   </nav>
-
-  <section id="inicio">
-    <h2>¿Qué es Ikigai?</h2>
-    <p>Ikigai es una academia de jiu-jitsu brasileño dedicada a formar practicantes con valores de respeto, disciplina y excelencia técnica. Nuestro enfoque es el desarrollo personal y deportivo a través del arte suave.</p>
-  </section>
 
   <section id="horarios">
     <h2>Horarios</h2>
     <ul>
-      <li><strong>Lunes</strong>
-        <ul>
-          <li>15:30 a 17:00 – Adultos (Mexa)</li>
-          <li>17:30 a 18:30 – Infantiles (Ema y Luli)</li>
-          <li>18:30 a 19:30 – Juveniles (Ema y Luli)</li>
-          <li>19:30 a 21:00 – Adultos (Silvinho)</li>
-        </ul>
-      </li>
-      <li><strong>Martes</strong>
-        <ul>
-          <li>14:30 a 16:00 – No-Gi (Silvinho)</li>
-          <li>16:30 a 18:00 – Femenino (Luli)</li>
-          <li>20:00 a 21:30 – +40 (Pira)</li>
-        </ul>
-      </li>
-      <li><strong>Miércoles</strong>
-        <ul>
-          <li>15:30 a 17:00 – Adultos (Mexa)</li>
-          <li>17:30 a 18:30 – Infantiles (Ema y Luli)</li>
-          <li>18:30 a 19:30 – Juveniles (Ema y Luli)</li>
-          <li>19:30 a 21:00 – Adultos (Silvinho)</li>
-        </ul>
-      </li>
-      <li><strong>Jueves</strong>
-        <ul>
-          <li>14:30 a 16:00 – No-Gi (Silvinho)</li>
-          <li>16:30 a 18:00 – Femenino (Luli)</li>
-          <li>20:00 a 21:30 – +40 (Pira)</li>
-        </ul>
-      </li>
-      <li><strong>Viernes</strong>
-        <ul>
-          <li>15:30 a 17:00 – Adultos (Mexa)</li>
-          <li>17:30 a 18:30 – Infantiles (Ema y Luli)</li>
-          <li>18:30 a 19:30 – Juveniles (Ema y Luli)</li>
-          <li>19:30 a 21:00 – Adultos (Silvinho)</li>
-        </ul>
-      </li>
+      <li>Lunes a Viernes - 18:00 a 20:00</li>
+      <li>Sábados - 10:00 a 12:00</li>
+      <li>Infantiles - Martes y Jueves - 17:00 a 18:00</li>
     </ul>
   </section>
 
@@ -136,28 +140,65 @@ footer {
     </ul>
   </section>
 
-  <section id="galeria">
-    <h2>Galería</h2>
-    <div class="galeria">
-      <!-- Acá podés pegar las fotos cuando me las pases -->
-      <p>📷 Próximamente imágenes de la academia.</p>
+  <section id="tienda">
+    <h2>Tienda Ikigai</h2>
+    <div class="productos">
+      <div class="card">
+        <h3>Kimono BJJ</h3>
+        <p>Alta resistencia. Disponible en varios talles.</p>
+      </div>
+      <div class="card">
+        <h3>Faixas (Cinturones)</h3>
+        <p>Todos los colores oficiales. Material reforzado.</p>
+      </div>
+      <div class="card">
+        <h3>Tatamis Plegables</h3>
+        <p>Perfectos para entrenar en casa.</p>
+      </div>
     </div>
   </section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>📍 Dirección: Tucumán 149, Viedma, Río Negro, Argentina</p>
-    <p>📱 WhatsApp: <a href="https://wa.me/5492920290565" target="_blank">+54 9 2920 29-0565</a></p>
+  <section id="avisos">
+    <h2>Avisos</h2>
+    <div class="avisos">
+      <div class="card">
+        <h3>Competencia en Neuquén</h3>
+        <p>Domingo 7 de Julio. Consultar con los profes.</p>
+      </div>
+      <div class="card">
+        <h3>Entrenamiento Suspendido</h3>
+        <p>Viernes 28 de Junio por mantenimiento.</p>
+      </div>
+    </div>
+  </section>
 
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.1912369142873!2d-63.00611002415799!3d-40.814029971372845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95f6a356a46db2ab%3A0x207d6c52000d7a6a!2sTucum%C3%A1n%20149%2C%20Viedma%2C%20R%C3%ADo%20Negro!5e0!3m2!1ses-419!2sar!4v1718661348975!5m2!1ses-419!2sar" 
-      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+  <section id="chat">
+    <h2>Chat General</h2>
+    <div class="chat-box" id="chatBox">
+      <p><strong>Ikigai:</strong> Bienvenidos al chat oficial de la academia.</p>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="mensaje" placeholder="Escribí tu mensaje...">
+      <button onclick="enviarMensaje()">Enviar</button>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Ikigai Jiu-Jitsu - Todos los derechos reservados.</p>
+    <p>&copy; 2025 Academia Ikigai - Nova União | <a href="https://www.instagram.com/ikigai_novauniao_viedma" target="_blank" style="color: white;">Instagram</a></p>
   </footer>
 
+  <script>
+    function enviarMensaje() {
+      const chatBox = document.getElementById("chatBox");
+      const input = document.getElementById("mensaje");
+      if (input.value.trim() !== "") {
+        const nuevo = document.createElement("p");
+        nuevo.innerHTML = `<strong>Vos:</strong> ${input.value}`;
+        chatBox.appendChild(nuevo);
+        input.value = "";
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }
+    }
+  </script>
 </body>
 </html>
